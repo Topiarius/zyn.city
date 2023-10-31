@@ -35,7 +35,9 @@ while True:
         subprocess.run(["git", "commit", "-m", "Auto Commit"])
 
         # Run git push to the specified remote repository and branch
-        push_output = subprocess.run(["git", "push", "origin", "master"], capture_output=True, text=True)
+        subprocess.run(["git", "push", "origin", "master"])
+
+        print("Git commands executed successfully.")
 
         # Update the initial modification times
         initial_mod_times = current_mod_times
