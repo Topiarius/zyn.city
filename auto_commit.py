@@ -28,16 +28,27 @@ while True:
         # Change to the repository directory
         os.chdir(repository_path)
 
-        # Run git add .
-        subprocess.run(["git", "add", "."])
+        # Run git pull to fetch changes from the remote repository
+        pull_output = subprocess.run(["git", "pull", "origin", "master"], capture_output=True, text=True)
 
-        # Run git commit -m "Auto Commit"
-        subprocess.run(["git", "commit", "-m", "Auto Commit"])
+        # Check if the pull was successful
+        if "Already up to date" not in pull_output.stdout:
+            # Run git add .
+            subprocess.run(["git", "add", "."])
 
-        # Run git push to the specified remote repository and branch
-        subprocess.run(["git", "push", "origin", "master"])
+            # Run git commit -m "Auto Commit"
+            subprocess.run(["git", "commit", "-m", "Auto Commit"])
 
-        print("Git commands executed successfully.")
+            # Run git push to the specified remote repository and branch
+            push_output = subprocess.run(["git", "push", "origin", "master"], capture_output=True, text=True)
+
+            # Check if the push was successful
+            if "Everything up-to-date" not in push_output.stdout:
+                print("Git commands executed successfully.")
+            else:
+                print("No changes to push.")
+        else:
+            print("No new changes from remote.")
 
         # Update the initial modification times
         initial_mod_times = current_mod_times
