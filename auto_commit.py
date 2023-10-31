@@ -35,7 +35,7 @@ while True:
         subprocess.run(["git", "commit", "-m", "Auto Commit"])
 
         # Run git push to the specified remote repository and branch
-        subprocess.run(["git", "push", "origin", "main"])
+        subprocess.run(["git", "push", "origin", "master"])
 
         print("Git commands executed successfully.")
 
