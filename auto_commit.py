@@ -42,5 +42,8 @@ while True:
         # Update the initial modification times
         initial_mod_times = current_mod_times
 
-    # Wait for a short interval before checking again (e.g., 1 second)
-    time.sleep(1)
+        # Wait for a short interval before checking again (e.g., 1 second)
+        time.sleep(1)
+    else:
+        # No changes detected, wait before checking again
+        time.sleep(1)
