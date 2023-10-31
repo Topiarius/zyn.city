@@ -35,9 +35,13 @@ while True:
         subprocess.run(["git", "commit", "-m", "Auto Commit"])
 
         # Run git push to the specified remote repository and branch
-        subprocess.run(["git", "push", "origin", "master"])
+        push_output = subprocess.run(["git", "push", "origin", "master"], capture_output=True, text=True)
 
-        print("Git commands executed successfully.")
+        # Check if the push was successful
+        if "Everything up-to-date" not in push_output.stdout:
+            print("Git commands executed successfully.")
+        else:
+            print("No changes to push.")
 
         # Update the initial modification times
         initial_mod_times = current_mod_times
