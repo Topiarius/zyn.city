@@ -34,3 +34,11 @@ div.a {
 .font {
     font-family: "VT323", normal;
 }
+
+a {
+    color: #56b0ff;
+}
+
+a:hover {
+    color: #2783d4;
+}
