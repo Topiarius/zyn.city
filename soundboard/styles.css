@@ -1,16 +1,12 @@
 body {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
-}
-
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    padding: 10px; /* Adjust padding as needed */
 }
 
 .sound-button {
@@ -21,6 +17,7 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 10px; /* Adjust margin as needed */
 }
 
 .sound-button:hover {
