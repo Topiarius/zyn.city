@@ -7,7 +7,7 @@ function playSound(soundFile) {
 var buttonContainer = document.getElementById('buttonContainer');
 
 // Fetch sound files from the GitHub API
-fetch('https://api.github.com/repos/YourUsername/YourRepository/contents/sounds')
+fetch('https://api.github.com/repos/Topiarius/sea.ftp.sh/soundboard/sounds')
     .then(response => response.json())
     .then(files => {
         // Filter only audio files (adjust if needed)
