@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	background-image: URL("https://zyn.city/files/background.jpg");
+	background-image: URL("https://zyn.city/files/background.png");
 	background-position: center;
 	background-size: cover;
 	height: 100%;
@@ -149,7 +149,7 @@ playback timings (ms):
 }
 
 body {
-	background-image: url("https://zyn.city/files/background.jpg");
+	background-image: url("https://zyn.city/files/background.png");
 	background-position: center;
 	background-size: cover;
 	height: 100%;
