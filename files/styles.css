@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	background-image: url("https://web.archive.org/web/20190128032359im_/https://new-heaven.us/img/background.png");
+	background-image: url("/background.png");
 	background-position: center;
 	background-size: cover;
 	height: 100%;
